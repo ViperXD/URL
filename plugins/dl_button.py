@@ -36,7 +36,7 @@ from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 
-
+@pyrogram.Client.on_message(pyrogram.Filters.command(["upload"]))
 async def ddl_call_back(bot, update):
     logger.info(update)
     cb_data = update.data
